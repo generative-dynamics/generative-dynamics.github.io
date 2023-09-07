@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GID">
+  <meta name="keywords" content="GID">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GID</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generative Image Dynamics</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhengqili.github.io/">Zhengqi Li</a>, </span>
+            <span class="author-block">
+              <a href="https://research.google/people/RichardTucker/">Richard Tucker</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://holynski.org/">Aleksander Holynski</a> </span>
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Google Research </span>
+          </div>
+
+          <!-- <h1 style="font-size:24px;font-weight:bold">CVPR 2023</h1> -->
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="static/pdfs/GID.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2211.11082"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#overview_video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Supp Link. -->
+              <!-- <span class="link-block"> -->
+<!--                 <a href="static/pdfs/supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block"> -->
+       <!--          <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a> -->
+              <!-- </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center>
+      <video id="teaser" autoplay muted loop playsinline controls width="80%">
+        <source src="static/videos/teaser-web.mp4" type="video/mp4">
+      </video>
+      </center>
+      <h3 class="subtitle has-text-centered">
+        <font size="2">
+        <span class="dnerf"> </span> 
+        From a single still picture, our approach models natural oscillation dynamics, <br> and allows for generation of seamless looping videos and simulating interactive dynamics.  </font>
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body nopadding">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/rose_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/fern_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/wildflower_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/sunflower_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/cherryblossm_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/tree_0_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/Dandelion_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/leaves_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/tree_1_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+<!--         <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/6133103-loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/lotus_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/tree_2_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="450px" width="auto">
+            <source src="static/videos/flower_0_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/grapes_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/leaves_close_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body nopadding">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/candle_0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+ 
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/paper_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/socks_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/candle_2_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/cat_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/latern_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/candle_3_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+ 
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/pink-rose_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/cloth_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+ 
+
+       <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/glove_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+       <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/yellow_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+       <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/latern_2_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+       <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/fern_2_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+      <h3 class="subtitle has-text-centered">
+        <font size="2">
+        <span class="dnerf"> </span> 
+        Our method automatically turns single still images into seamless looping videos. </font>
+      </h3>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          We present a new approach for modeling and animating dynamics from a single still picture. Our focus is real-world scenes with natural oscillation motions such as trees, flowers, clothes, or candle flames moving in the breeze. Most state-of-the-art video animation methods typically predicts video frames directly, producing animation of short time duration, low frame rate, exhibiting unrealistic and temporal inconsistent motions or textures. Based on the observation that natural oscillation motions can be modeled efficiently and accurately in frequency space, we present Neural Stochastic Motion Textures, a new motion representation that models per-pixel motion trajectory of input picture within Fourier domain. We learn the motion priors through frequency latent co-denoising model from a large collections of videos, so that during inference, predicted stochastic motion textures are used to animate future frames via image-based rendering. We show that our approach produces photo-realistic animation of much higher generation quality compared with prior baselines, and demonstrate that neural stochastic motion textures enables a variety of motion and video editing effects.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<br>
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3"> More Motion-based Applications</h2>
+</div>
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video autoplay controls muted loop playsinline id="result_video_side" height="720px" width="auto" > 
+        <source type="video/mp4" src="static/videos/InterativeDynamics.mp4" /> 
+    </video>
+<!-- 
+    <video autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
+    </video>
+    <video  autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
+    </video> -->
+    <div class="clear"></div>
+    With stochastic motion textures, we can simulate response of object dynamics from an external user excitation.
+</div>
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video autoplay controls muted loop playsinline id="result_video_side" height="720px" width="auto" > 
+        <source type="video/mp4" src="static/videos/MotionMag.mp4" /> 
+    </video>
+<!-- 
+    <video autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
+    </video>
+    <video  autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
+    </video> -->
+    <div class="clear"></div>
+    We can minify (top) or magnify (bottom) animated motions by adjusting the amplitude of motion textures.
+</div>
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video autoplay controls muted loop playsinline id="result_video_side" height="720px" width="auto" > 
+        <source type="video/mp4" src="static/videos/slowmotion.mp4" /> 
+    </video>
+<!-- 
+    <video autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
+    </video>
+    <video  autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
+    </video> -->
+    <div class="clear"></div>
+    Slow-motion videos can be generated by interpolating predicted motion textures.
+</div>
+<br>
+    <!-- Paper video. -->
+<!--     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <a id="overview_video"></a>
+          <iframe src="https://www.youtube.com/embed/prrhosyJzIA" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+     -->
+    <!--/ Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-3">Acknowledgements</h3>
+        <div class="content has-text-justified">
+          <p>
+            Thanks to Andrew Liu, Qianqian Wang, Boyang Deng, Xuan Luo, and Lucy Chai for the helpful comments and discussions.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+ <br>
+<!-- 
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3"> More Results</h2>
+</div>
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video autoplay controls muted loop playsinline id="result_video_side" height="450px" width="auto" width="auto" > 
+        <source type="video/mp4" src="static/videos/2558_side-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
+    </video>
+    <video  autoplay controls muted loop playsinline id="result_video_side"> 
+        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div>
+Tracking camera motion (horizontal) 
+</div>
+
+<br>
+
+<div id="wrapper" style="text-align:center;  padding: 2em 0;"> 
+    <video  autoplay controls muted loop playsinline id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/000679_up-down-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop playsinline id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/5428_up-down-0-1.mp4" /> 
+    </video>
+
+    <video  autoplay controls muted loop playsinline id="result_video_updown"> 
+        <source type="video/mp4" src="static/videos/000350_up-down-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+
+Tracking camera motion (vertical) 
+</div>
+
+<br>
+
+<div id="wrapper" style="text-align:center;"> 
+    <video  autoplay controls muted loop playsinline id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_000204-0-1.mp4" /> 
+    </video>
+
+    <video autoplay controls muted loop playsinline id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_0161-0-1.mp4" /> 
+    </video>
+
+    <video  autoplay controls muted loop playsinline id="result_video_zooming"> 
+        <source type="video/mp4" src="static/videos/zoom-in_000304-0-1.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+
+Zooming-In camera motion 
+</div>
+</section>
+
+<br>
+<br>
+
+<section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> Failure Cases</h2>
+    </div>
+<br>
+    <div id="wrapper" style="text-align:center;"> 
+    <video  autoplay controls muted loop playsinline id="failure_video"> 
+        <source type="video/mp4" src="static/videos/failure1.mp4" /> 
+    </video>
+&nbsp;&nbsp;
+    <video  autoplay controls muted loop playsinline id="failure_video"> 
+        <source type="video/mp4" src="static/videos/failure2.mp4" /> 
+    </video>
+
+    <div class="clear"></div> 
+Our method cannot handle motions that are too large/challenging, and doesn't work well with incorrectly estimated monocular depths.
+
+</div>
+</section> -->
+
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@{li2022_infinite_nature_zero,
+  title     = {GID: Learning Perpetual View Generation of Natural Scenes from Single Images},
+  author    = {Li, Zhengqi and Wang, Qianqian and Snavely, Noah and Kanazawa, Angjoo},
+  year      = {2022}
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div align="center" class="container">
+    <div class="columns is-centered">
+        <div class="content">
+            This website is borrowed from <a href="https://github.com/3d-moments/3d-moments.github.io">3D Moments</a>.
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
