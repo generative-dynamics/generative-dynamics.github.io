@@ -144,14 +144,14 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <center>
-      <video id="teaser" autoplay muted loop playsinline controls width="75%">
+      <video id="teaser" autoplay muted loop playsinline controls width="80%">
         <source src="static/videos/teaser-web.mp4" type="video/mp4">
       </video>
       </center>
       <h3 class="subtitle has-text-centered">
         <font size="2">
         <span class="dnerf"> </span> 
-        From a single still picture, our approach models natural oscillation dynamics, <br> and allows for generation of seamless looping videos and simulating interactive dynamics.  </font>
+        From a single picture, our approach models an image-space priors on scene dynamics, <br> and allows for generation of seamless looping videos and simulating interactive dynamics.  </font>
       </h3>
     </div>
   </div>
@@ -301,12 +301,6 @@
           </video>
         </div>
 
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
-            <source src="static/videos/candle_2_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
@@ -314,6 +308,14 @@
                     type="video/mp4">
           </video>
         </div>
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/candle_2_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
@@ -330,10 +332,18 @@
  
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
-            <source src="static/videos/pink-rose_loop.mp4"
+            <source src="static/videos/chime_loop.mp4"
                     type="video/mp4">
           </video>
         </div>
+ 
+<!-- 
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
+            <source src="static/videos/pink-rose_loop.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline controls muted loop height="288px">
@@ -391,7 +401,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          We present a new approach for modeling and animating dynamics from a single still picture. Our focus is real-world scenes with natural oscillation motions such as trees, flowers, clothes, or candle flames moving in the breeze. Most state-of-the-art video animation methods typically predicts video frames directly, producing animation of short time duration, low frame rate, exhibiting unrealistic and temporal inconsistent motions or textures. Based on the observation that natural oscillation motions can be modeled efficiently and accurately in frequency space, we present Neural Stochastic Motion Textures, a new motion representation that models per-pixel motion trajectory of input picture within Fourier domain. We learn the motion priors through frequency latent co-denoising model from a large collections of videos, so that during inference, predicted stochastic motion textures are used to animate future frames via image-based rendering. We show that our approach produces photo-realistic animation of much higher generation quality compared with prior baselines, and demonstrate that neural stochastic motion textures enables a variety of motion and video editing effects.
+          We present an approach to modeling an image-space prior on scene dynamics. Our prior is learned from a collection of motion trajectories extracted from real video sequences containing natural, oscillating motion, such as trees, flowers, candles, and clothes blowing in the wind. Given a single image, our trained model uses a frequency-coordinated diffusion process to predict a per-pixel motion representation in the Fourier domain, which we call a \emph{neural stochastic motion texture}. This representation can be converted into long-term per-pixel motion trajectories that, along with an  image-based rendering module, can be used for a number of downstream applications, such as turning still images into seamlessly looping dynamic videos, or allowing users to realistically interact with objects in real pictures. 
           </p>
         </div>
       </div>
@@ -417,7 +427,7 @@
         <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
     </video> -->
     <div class="clear"></div>
-    With stochastic motion textures, we can simulate response of object dynamics from an external user excitation.
+    With stochastic motion textures, we can simulate response of object dynamics to an interactive user excitation.
 </div>
 <br>
 
@@ -567,16 +577,16 @@ Our method cannot handle motions that are too large/challenging, and doesn't wor
 </section> -->
 
 
-<!-- 
-<section class="section" id="BibTeX">
+
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-@{li2022_infinite_nature_zero,
-  title     = {GID: Learning Perpetual View Generation of Natural Scenes from Single Images},
-  author    = {Li, Zhengqi and Wang, Qianqian and Snavely, Noah and Kanazawa, Angjoo},
-  year      = {2022}
-}</code></pre>
+      @inproceedings{li2023_GID,
+      title     = {Generative Image Dynamics},
+      author    = {Li, Zhengqi and Tucker, Richard and Snavely, Noah and Holynski, Aleksander},
+      year      = {2022}
+    }</code></pre>
   </div>
 </section> -->
 
