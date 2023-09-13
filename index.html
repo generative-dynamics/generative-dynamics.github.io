@@ -82,7 +82,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2211.11082"
+                <a href="https://arxiv.org/abs/xxx"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -144,12 +144,12 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <center>
-      <video id="teaser" autoplay muted loop playsinline width="80%">
+      <video id="teaser" autoplay muted loop playsinline width="75%">
         <source src="static/videos/teaser-web.mp4" type="video/mp4">
       </video>
       </center>
       <h3 class="subtitle has-text-centered">
-        <font size="2">
+        <font size="4">
         <span class="dnerf"> </span> 
         From a single picture, our approach models an image-space priors on scene dynamics, <br> and allows for generation of seamless looping videos and simulating interactive dynamics.  </font>
       </h3>
@@ -383,7 +383,7 @@
 
       </div>
       <h3 class="subtitle has-text-centered">
-        <font size="2">
+        <font size="4">
         <span class="dnerf"> </span> 
         Our method automatically turns single still images into seamless looping videos. </font>
       </h3>
@@ -401,7 +401,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          We present an approach to modeling an image-space prior on scene dynamics. Our prior is learned from a collection of motion trajectories extracted from real video sequences containing natural, oscillating motion, such as trees, flowers, candles, and clothes blowing in the wind. Given a single image, our trained model uses a frequency-coordinated diffusion process to predict a per-pixel motion representation in the Fourier domain, which we call a \emph{neural stochastic motion texture}. This representation can be converted into long-term per-pixel motion trajectories that, along with an  image-based rendering module, can be used for a number of downstream applications, such as turning still images into seamlessly looping dynamic videos, or allowing users to realistically interact with objects in real pictures. 
+            We present an approach to modeling an image-space prior on scene dynamics. Our prior is learned from a collection of motion trajectories extracted from real video sequences containing natural, oscillating motion such as trees, flowers, candles, and clothes blowing in the wind. Given a single image, our trained model uses a frequency-coordinated diffusion sampling process to predict a per-pixel long-term motion representation in the Fourier domain, which we call a neural stochastic motion texture. This representation can be converted into dense motion trajectories that span an entire video and, along with an image-based rendering module, can be used for a number of downstream applications, such as turning still images into seamlessly looping dynamic videos, or allowing users to realistically interact with objects in real pictures. 
           </p>
         </div>
       </div>
@@ -479,7 +479,7 @@
         <h3 class="title is-3">Acknowledgements</h3>
         <div class="content has-text-justified">
           <p>
-            Thanks to Richard Szeliski, Andrew Liu, Qianqian Wang, Boyang Deng, Xuan Luo, and Lucy Chai for helpful proofreading, comments and discussions.
+            Thanks to Rick Szeliski, Andrew Liu, Qianqian Wang, Boyang Deng, Xuan Luo, and Lucy Chai for helpful proofreading, comments and discussions.
         </div>
       </div>
     </div>
@@ -489,92 +489,6 @@
 </section>
 
  <br>
-<!-- 
-<section>
-  <div class="columns is-centered has-text-centered">
-    <h2 class="title is-3"> More Results</h2>
-</div>
-<br>
-
-<div id="wrapper" style="text-align:center;"> 
-    <video autoplay muted loop playsinline id="result_video_side" height="450px" width="auto" width="auto" > 
-        <source type="video/mp4" src="static/videos/2558_side-0-1.mp4" /> 
-    </video>
-
-    <video autoplay muted loop playsinline id="result_video_side"> 
-        <source type="video/mp4" src="static/videos/000654_side-0-1.mp4" /> 
-    </video>
-    <video  autoplay muted loop playsinline id="result_video_side"> 
-        <source type="video/mp4" src="static/videos/000242_side-0-1.mp4" /> 
-    </video>
-
-    <div class="clear"></div>
-Tracking camera motion (horizontal) 
-</div>
-
-<br>
-
-<div id="wrapper" style="text-align:center;  padding: 2em 0;"> 
-    <video  autoplay muted loop playsinline id="result_video_updown"> 
-        <source type="video/mp4" src="static/videos/000679_up-down-0-1.mp4" /> 
-    </video>
-
-    <video autoplay muted loop playsinline id="result_video_updown"> 
-        <source type="video/mp4" src="static/videos/5428_up-down-0-1.mp4" /> 
-    </video>
-
-    <video  autoplay muted loop playsinline id="result_video_updown"> 
-        <source type="video/mp4" src="static/videos/000350_up-down-0-1.mp4" /> 
-    </video>
-
-    <div class="clear"></div> 
-
-Tracking camera motion (vertical) 
-</div>
-
-<br>
-
-<div id="wrapper" style="text-align:center;"> 
-    <video  autoplay muted loop playsinline id="result_video_zooming"> 
-        <source type="video/mp4" src="static/videos/zoom-in_000204-0-1.mp4" /> 
-    </video>
-
-    <video autoplay muted loop playsinline id="result_video_zooming"> 
-        <source type="video/mp4" src="static/videos/zoom-in_0161-0-1.mp4" /> 
-    </video>
-
-    <video  autoplay muted loop playsinline id="result_video_zooming"> 
-        <source type="video/mp4" src="static/videos/zoom-in_000304-0-1.mp4" /> 
-    </video>
-
-    <div class="clear"></div> 
-
-Zooming-In camera motion 
-</div>
-</section>
-
-<br>
-<br>
-
-<section>
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3"> Failure Cases</h2>
-    </div>
-<br>
-    <div id="wrapper" style="text-align:center;"> 
-    <video  autoplay muted loop playsinline id="failure_video"> 
-        <source type="video/mp4" src="static/videos/failure1.mp4" /> 
-    </video>
-&nbsp;&nbsp;
-    <video  autoplay muted loop playsinline id="failure_video"> 
-        <source type="video/mp4" src="static/videos/failure2.mp4" /> 
-    </video>
-
-    <div class="clear"></div> 
-Our method cannot handle motions that are too large/challenging, and doesn't work well with incorrectly estimated monocular depths.
-
-</div>
-</section> -->
 
 
 
