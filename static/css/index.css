@@ -173,7 +173,6 @@ body {
 
 #result_video_side {
     width: auto;
-    height: 500px;
     object-fit: cover;
 }
 
