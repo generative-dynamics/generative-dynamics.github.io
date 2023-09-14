@@ -38,6 +38,28 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+<style>
+#interactive {
+  position: relative;
+  display: inline-block;
+  height: 432px;
+  width: 768px;
+}
+#interactive canvas, #interactive svg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#interactive svg {
+  pointer-events: none;
+}
+.load img {
+  width: 128px;
+  height: 72px;
+  margin-right: 4px;
+}
+</style>
 </head>
 <body>
 
@@ -151,7 +173,7 @@
       <h3 class="subtitle has-text-centered">
         <font size="2">
         <span class="dnerf"> </span> 
-        From a single picture, our approach models an image-space priors on scene dynamics, <br> and allows for generation of seamless looping videos and simulating interactive dynamics.  </font>
+        From a single picture, our approach models an image-space prior on scene dynamics <br> that can be used to generate seamless looping videos and simulate interactive dynamics.  </font>
       </h3>
     </div>
   </div>
@@ -168,18 +190,32 @@
             <source src="static/videos/rose_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/fern_2_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
-
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
             <source src="static/videos/fern_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/latern_2_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
             <source src="static/videos/wildflower_loop.mp4"
+                    type="video/mp4">
+          </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/yellow_loop.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -189,12 +225,22 @@
             <source src="static/videos/sunflower_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/glove_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
         
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
             <source src="static/videos/tree_0_loop.mp4"
+                    type="video/mp4">
+          </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/cloth_loop.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -212,6 +258,11 @@
           <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
             <source src="static/videos/Dandelion_loop.mp4"
                     type="video/mp4">
+          </video> 
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/chime_loop.mp4"
+                    type="video/mp4">
           </video>
         </div>
 
@@ -220,10 +271,20 @@
             <source src="static/videos/leaves_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/candle_3_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
             <source src="static/videos/tree_1_loop.mp4"
+                    type="video/mp4">
+          </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/latern_loop.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -240,11 +301,21 @@
             <source src="static/videos/lotus_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/candle_2_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
             <source src="static/videos/tree_2_loop.mp4"
+                    type="video/mp4">
+          </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/cat_loop.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -254,6 +325,11 @@
             <source src="static/videos/flower_0_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/socks_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
 
         <div class="item item-fullbody">
@@ -261,11 +337,21 @@
             <source src="static/videos/grapes_loop.mp4"
                     type="video/mp4">
           </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/paper_loop.mp4"
+                    type="video/mp4">
+          </video>
         </div>
 
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
             <source src="static/videos/leaves_close_loop.mp4"
+                    type="video/mp4">
+          </video>
+	<br>
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/candle_0.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -280,62 +366,10 @@
 <section class="hero is-light is-small">
   <div class="hero-body nopadding">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/candle_0.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
  
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/paper_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/socks_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 
 
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/cat_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/candle_2_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/latern_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/candle_3_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
  
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/chime_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
  
 <!-- 
         <div class="item item-fullbody">
@@ -345,41 +379,11 @@
           </video>
         </div> -->
 
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/cloth_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
  
 
-       <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/glove_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 
-       <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/yellow_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 
-       <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/latern_2_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 
-       <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
-            <source src="static/videos/fern_2_loop.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 
       </div>
       <h3 class="subtitle has-text-centered">
@@ -410,9 +414,6 @@
 
 <br>
 <section>
-  <div class="columns is-centered has-text-centered">
-    <h2 class="title is-3"> More Motion-based Applications</h2>
-</div>
 <br>
 
 <div id="wrapper" style="text-align:center;"> 
@@ -430,6 +431,614 @@
     With stochastic motion textures, we can simulate response of object dynamics to an interactive user excitation.
 </div>
 <br>
+<br>
+<div class="columns is-centered has-text-centered">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffdf0f}</style><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"/></svg>
+ </span><h2 class="title is-3">&nbsp; Try it yourself! &nbsp;</h2>                
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"/></svg> 
+</div>
+<div class="columns is-centered has-text-centered">
+Click and drag a point on the image blow, release to see how the scene moves!
+</div>
+
+<!-- Begin demo --!>
+<center>
+<div id="interactive" class="hero">
+<canvas id="canvas" width="512" height="288"></canvas>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288" fill="none"><path id="arrowpath" stroke="white" stroke-width="3" d="M 393.9105549880691 113.23578423775986 l 23.49309084526422 22.441299095573477 m -0.32373748119006535 -14.138429688026626 l 0.32373748119006535 14.138429688026626 l -14.138429688026626 0.32373748119006535"></path><circle id="targetpoint" cx="393.9105549880691" cy="113.23578423775986" r="5" fill="#08f" stroke="white" stroke-width="2"></circle></svg>
+</div>
+
+<br> 
+Try a different image by clicking on the icons below:
+<div class="load">
+ <img src="static/images/rose/image.png" data-folder="rose"><img src="static/images/flower/image.png" data-folder="flower">
+</div>
+</center>
+
+<br>
+<br>
+
+<script>
+// === GLOBALS ===
+let canvas;
+let gl;
+
+// === SETTINGS ===
+
+const PI = Math.PI;
+
+// === SHADERS & PROGRAMS ===
+
+const vertexShaders = {
+  'pointwarp': {
+    attribute: ['xy', 'flows_0123', 'flows_4567', 'flows_89ab', 'flows_cdef'],
+    uniform: [
+        'flows',
+        'phi_0', 'phi_1', 'phi_2', 'phi_3', 'phi_4', 'phi_5', 'phi_6', 'phi_7',
+        'phi_8', 'phi_9', 'phi_a', 'phi_b', 'phi_c', 'phi_d', 'phi_e', 'phi_f'],
+    src: `#version 300 es
+      in vec2 xy;
+      in uvec4 flows_0123;
+      in uvec4 flows_4567;
+      in uvec4 flows_89ab;
+      in uvec4 flows_cdef;
+      out vec2 uv;
+      uniform mediump vec4 phi_0;
+      uniform mediump vec4 phi_1;
+      uniform mediump vec4 phi_2;
+      uniform mediump vec4 phi_3;
+      uniform mediump vec4 phi_4;
+      uniform mediump vec4 phi_5;
+      uniform mediump vec4 phi_6;
+      uniform mediump vec4 phi_7;
+      uniform mediump vec4 phi_8;
+      uniform mediump vec4 phi_9;
+      uniform mediump vec4 phi_a;
+      uniform mediump vec4 phi_b;
+      uniform mediump vec4 phi_c;
+      uniform mediump vec4 phi_d;
+      uniform mediump vec4 phi_e;
+      uniform mediump vec4 phi_f;
+
+      // xr, yr, xi, yi – low byte first.
+      vec4 decode(uint i) {
+        return vec4(
+          float(i & 0xffu) / 128.0 - 1.0,
+          float((i>>8) & 0xffu) / 128.0 - 1.0,
+          float((i>>16) & 0xffu) / 128.0 - 1.0,
+          float((i>>24) & 0xffu) / 128.0 - 1.0);
+      }
+
+      void main(void) {
+        float x = (xy.x + 0.5) / 512.0;
+        float y = 1.0 - (xy.y + 0.5) / 288.0;
+        uv = vec2(x, 1.0 - y);
+        // Each phi is real_x, real_y, imaginary_x, imaginary_y, and each flow int32 is
+        // in the same order
+        vec4 flow = decode(flows_0123.r) * phi_0 + decode(flows_0123.g) * phi_1
+                  + decode(flows_0123.b) * phi_2 + decode(flows_0123.a) * phi_3
+                  + decode(flows_4567.r) * phi_4 + decode(flows_4567.g) * phi_5
+                  + decode(flows_4567.b) * phi_6 + decode(flows_4567.a) * phi_7
+                  + decode(flows_89ab.r) * phi_8 + decode(flows_89ab.g) * phi_9
+                  + decode(flows_89ab.b) * phi_a + decode(flows_89ab.a) * phi_b
+                  + decode(flows_cdef.r) * phi_c + decode(flows_cdef.g) * phi_d
+                  + decode(flows_cdef.b) * phi_e + decode(flows_cdef.a) * phi_f;
+        float flow_x = (flow.x - flow.z) / 256.0;
+        float flow_y = (flow.y - flow.w) / 144.0;
+        float flow_norm = flow_x * flow_x + flow_y * flow_y;
+        float z = -flow_norm;
+        x = x * 2.0 - 1.0;
+        y = y * 2.0 - 1.0;
+        gl_Position = vec4(x + flow_x, y - flow_y, z, 1.0);
+      }`
+  },
+}
+
+const fragmentShaders = {
+  'f': {
+    uniform: ['image'],
+    src: `#version 300 es
+      in mediump vec2 uv;
+      uniform sampler2D image;
+      out mediump vec4 fragColor;
+
+      void main(void) {
+        mediump vec4 c = texture(image, uv);
+        fragColor = c;
+      }`
+  },
+}
+
+const programs = {
+  'pointwarp': ['pointwarp', 'f'],
+};
+
+
+
+// === WEBGL SETUP ===
+
+function initShaders(shaders, type) {
+  for (let i in shaders) {
+    const s = gl.createShader(type);
+    const shader = shaders[i];
+    gl.shaderSource(s, shader.src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+      console.log('Compiling ' + i, gl.getShaderInfoLog(s));
+    }
+    shader.shader = s;
+    if (!shader.uniform) {
+      shader.uniform = [];
+    }
+    if (!shader.attribute) {
+      shader.attribute = [];
+    }
+  }
+  console.log('Shaders compiled.');
+}
+
+function initPrograms(vertexShaders, fragmentShaders, programs) {
+  for (let i in programs) {
+    const p = gl.createProgram();
+    const vertex = vertexShaders[programs[i][0]];
+    const fragment = fragmentShaders[programs[i][1]];
+    gl.attachShader(p, vertex.shader);
+    gl.attachShader(p, fragment.shader);
+    gl.linkProgram(p);
+    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+      console.log('Linking ' + i, gl.getProgramInfoLog(p));
+    }
+    const attribute = {};
+    const uniform = {};
+    vertex.attribute.concat(fragment.attribute).forEach((a) => {
+      attribute[a] = gl.getAttribLocation(p, a);
+    });
+    vertex.uniform.concat(fragment.uniform).forEach((u) => {
+      uniform[u] = gl.getUniformLocation(p, u);
+    });
+    programs[i].program = p;
+    programs[i].attribute = attribute;
+    programs[i].uniform = uniform;
+  }
+  console.log('Programs inited.');
+}
+
+function init() {
+  canvas = document.getElementById('canvas');
+  gl = canvas.getContext('webgl2', {antialias: false, alpha: false});
+  if (!gl) {
+    glFailed();
+  }
+  initShaders(vertexShaders, gl.VERTEX_SHADER);
+  initShaders(fragmentShaders, gl.FRAGMENT_SHADER);
+  initPrograms(vertexShaders, fragmentShaders, programs);
+}
+
+init();
+
+let remaining_to_load = 0;
+function loadTexture(url) {
+  const t = gl.createTexture();
+  const image = new Image();
+  image.onload = function() {
+    gl.bindTexture(gl.TEXTURE_2D, t);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    remaining_to_load--;
+  }
+  remaining_to_load++;
+  image.src = url;
+  return t;
+}
+
+function pointArray(width, height, border) {
+  const columns = width + 2 * border;
+  const rows = height + 2 * border;
+  const data = new Float32Array((columns * rows) * 2);
+  for (let x = 0; x < columns; x++) {
+    for (let y = 0; y < rows; y++) {
+      const idx = (y*columns + x) * 2;
+      data[idx] = x - border;
+      data[idx + 1] = y - border;
+    }
+  }
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+  return buffer;
+}
+
+function meshArray(width, height, border) {
+  const columns = width + 2 * border;
+  const rows = height + 2 * border;
+  const size = (rows-1) * columns * 2;
+  const data = new Uint32Array(size);
+  let direction = 1;
+  let idx = 0;
+  for (let y = 0; y < rows-1; y++) {
+    for (let x = 0; x < columns; x++) {
+      let xx = x;
+      if (direction < 0) {
+        xx = columns - 1 - x;
+      }
+      data[idx] = y * columns + xx;
+      data[idx+1] = (y + 1) * columns + xx;
+      idx += 2; 
+    }
+    direction = -direction;
+  }
+  console.assert(idx == size);
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, data, gl.STATIC_DRAW);
+  return [buffer, size]
+}
+
+// If we use gl.INT attributes with four components we can send 16 bytes of data
+// to the vertex shader in one attribute. With 4 attributes we can send 64 bytes.
+// So if one byte encodes a number in the range (-128,127) (normalize to -1, 1)
+// we can pack our 64 flow coefficients this way.
+//
+function clamp(i, base, limit) {
+  return (i < base ? base : i >= limit ? limit-1 : i);
+}
+async function loadFlowCoefficients(file, width, height, border) {
+  const frequencies = 16;
+  const columns = width + 2 * border;
+  const rows = height + 2 * border;
+  const response = await fetch(file);
+  const data = new Uint32Array(await response.arrayBuffer());
+  console.assert(data.length == width * height * frequencies, 'Flow data is wrong size!');
+  const padded = new Uint32Array(columns * rows * frequencies);
+  // Copy data into padded with padding at border;
+  for (let x = 0; x < columns; x++) {
+    for (let y = 0; y < rows; y++) {
+      const dx = clamp(x, border, width+border) - border;
+      const dy = clamp(y, border, height+border) - border;
+      const from = frequencies * (dy * width + dx);
+      const to = frequencies * (y * columns + x);
+      for (let i = 0; i < frequencies; i++) {
+        padded[to + i] = data[from + i];
+      }
+    }
+  }
+  // Make the very edge always have zero.
+  function zero(x, y) {
+    const to = frequencies * (y * columns + x);
+    for (let i = 0; i < frequencies; i++) {
+      padded[to + i] = 0x80808080;
+    }
+  }
+  for (let x = 0; x < columns; x++) {
+    zero(x, 0);
+    zero(x, rows-1);
+  }
+  for (let y = 0; y < rows; y++) {
+    zero(0, y);
+    zero(columns-1, y);
+  }
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, padded, gl.STATIC_DRAW);
+  return [data, buffer];
+}
+
+function glReset() {
+  gl.enable(gl.DEPTH_TEST);
+  gl.enable(gl.BLEND);
+  gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+  gl.depthFunc(gl.LEQUAL);
+  console.log('reset');
+}
+
+glReset();
+
+const all_scales = {
+  rose: [
+      811.0434532, 115.36923941, 63.62726212, 39.51707513,
+      36.09076083, 26.24578261, 21.01270468, 26.08560528,
+      23.15340153, 25.50192807, 65.31978774, 38.00659665,
+      43.62371262, 55.01228421, 195.62246622, 54.19888583
+  ],
+  flower: [
+      987.95284009, 73.41425321, 119.1790891, 51.5506267,
+      39.01246448, 56.93307181, 49.79553268, 29.98144,
+      18.90769313, 40.17826362, 48.75677635, 38.4140233,
+      68.85882055, 55.3376773, 35.49130819, 16.33732716
+  ]
+}
+const all_omega_scales = {
+  rose: 2.0,
+  flower: 3.0
+}
+
+function draw(data, state) {
+  function phi(f) {
+    const s = state.scales[f];
+    const x = state.position_x[f] * state.omega[f] * s;
+    const y = state.position_y[f] * state.omega[f] * s
+    // If phase = 0, this is just [x, y, 0, 0];
+    return [x * Math.cos(state.phase_x[f]), y * Math.cos(state.phase_y[f]), 
+            -x * Math.sin(state.phase_x[f]), -y * Math.sin(state.phase_y[f]) ];
+  }
+  
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+  const p = programs['pointwarp'];
+  gl.bindBuffer(gl.ARRAY_BUFFER, data.points);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, data.indices);
+
+  gl.useProgram(p.program);
+  gl.enableVertexAttribArray(p.attribute.xy);
+  gl.vertexAttribPointer(p.attribute.xy, 2, gl.FLOAT, false, 8, 0);
+  // 4 int-32s per buffer
+  gl.bindBuffer(gl.ARRAY_BUFFER, data.flowbuffer);
+  gl.enableVertexAttribArray(p.attribute.flows_0123);
+  gl.vertexAttribIPointer(p.attribute.flows_0123, 4, gl.UNSIGNED_INT, 64, 0);
+  gl.enableVertexAttribArray(p.attribute.flows_4567);
+  gl.vertexAttribIPointer(p.attribute.flows_4567, 4, gl.UNSIGNED_INT, 64, 16);
+  gl.enableVertexAttribArray(p.attribute.flows_89ab);
+  gl.vertexAttribIPointer(p.attribute.flows_89ab, 4, gl.UNSIGNED_INT, 64, 32);
+  gl.enableVertexAttribArray(p.attribute.flows_cdef);
+  gl.vertexAttribIPointer(p.attribute.flows_cdef, 4, gl.UNSIGNED_INT, 64, 48);
+
+
+  gl.activeTexture(gl.TEXTURE0);
+  gl.bindTexture(gl.TEXTURE_2D, data.image);
+  gl.uniform1i(p.uniform.image, 0);
+
+  gl.uniform4fv(p.uniform.phi_0, phi(0));
+  gl.uniform4fv(p.uniform.phi_1, phi(1));
+  gl.uniform4fv(p.uniform.phi_2, phi(2));
+  gl.uniform4fv(p.uniform.phi_3, phi(3));
+  gl.uniform4fv(p.uniform.phi_4, phi(4));
+  gl.uniform4fv(p.uniform.phi_5, phi(5));
+  gl.uniform4fv(p.uniform.phi_6, phi(6));
+  gl.uniform4fv(p.uniform.phi_7, phi(7));
+  gl.uniform4fv(p.uniform.phi_8, phi(8));
+  gl.uniform4fv(p.uniform.phi_9, phi(9));
+  gl.uniform4fv(p.uniform.phi_a, phi(10));
+  gl.uniform4fv(p.uniform.phi_b, phi(11));
+  gl.uniform4fv(p.uniform.phi_c, phi(12));
+  gl.uniform4fv(p.uniform.phi_d, phi(13));
+  gl.uniform4fv(p.uniform.phi_e, phi(14));
+  gl.uniform4fv(p.uniform.phi_f, phi(15));
+  
+  gl.drawElements(gl.TRIANGLE_STRIP, data.indexcount, gl.UNSIGNED_INT, 0);
+}
+
+const alpha = 0.8;
+const beta = 0.05;
+
+let data = {};
+let state = {
+  position_x:[], position_y:[], velocity_x:[], velocity_y:[],
+  phase_x:[], phase_y:[],
+  omega:[], omega_squared:[], damping:[],
+  time:Date.now()
+};
+
+function calculate_omega(scale) {
+  for (let f = 0; f < 16; f++) {
+    state.omega[f] = scale * f * 30/76;  // Initial FFT frequencies for 5 second video @30fps.
+    state.omega_squared[f] = state.omega[f] * state.omega[f];
+    state.damping[f] = alpha + beta * state.omega_squared[f];
+  }
+}
+
+function update(state) {
+  // Only allow frame rates from 30 to 60fps.
+  const time = Date.now();
+  const dt = Math.max(Math.min((time - state.time)/1000, 1/30), 1/60);
+  state.time = time;
+
+  for (let f = 0; f < 16; f++) {
+    const acceleration_x = -state.damping[f] * state.velocity_x[f] - state.omega_squared[f] * state.position_x[f];
+    const acceleration_y = -state.damping[f] * state.velocity_y[f] - state.omega_squared[f] * state.position_y[f];
+    state.position_x[f] += state.velocity_x[f] * dt;
+    state.position_y[f] += state.velocity_y[f] * dt;
+    state.velocity_x[f] += acceleration_x * dt;
+    state.velocity_y[f] += acceleration_y * dt
+  }
+}
+
+let t = 0;
+
+function tick() {
+  window.requestAnimationFrame(tick);
+  if (remaining_to_load > 0) {
+    return;
+  }
+  draw(data, state);
+  if (!state.held) {
+    update(state);
+  }
+}
+
+
+async function load(folder) {
+  const border = 16;
+  remaining_to_load++;
+  data.image = loadTexture(`static/images/${folder}/image.png`);
+  data.points = pointArray(512, 288, border);
+  gl.bindBuffer(gl.ARRAY_BUFFER, data.points);
+  let buffersize = gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
+  console.log('points', buffersize);
+  [data.indices, data.indexcount] = meshArray(512, 288, border);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, data.indices);
+  buffersize = gl.getBufferParameter(gl.ELEMENT_ARRAY_BUFFER, gl.BUFFER_SIZE);
+  console.log('indices', buffersize);
+  [data.flow, data.flowbuffer] = await loadFlowCoefficients(`static/images/${folder}/flow_xy_data`, 512, 288, border);
+  gl.bindBuffer(gl.ARRAY_BUFFER, data.flowbuffer);
+  buffersize = gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
+  console.log('flows', buffersize);
+  state.scales = all_scales[folder];
+  state.loading = false;
+  console.log('Loaded', folder);
+
+  for (let f = 0; f < 16; f++) {
+    state.position_x[f] = 0;
+    state.position_y[f] = 0;
+    state.velocity_x[f] = 0;
+    state.velocity_y[f] = 0;
+    state.phase_x[f] = 0;
+    state.phase_y[f] = 0;
+  }
+  calculate_omega(all_omega_scales[folder]);
+  remaining_to_load--;
+}
+
+
+
+var pull_scale_posonly = 5e-5;
+
+function hideArrow() {
+  const a = document.querySelector('#arrowpath');
+  const c = document.querySelector('#targetpoint');
+  a.setAttribute('d', '');
+  c.setAttribute('cx', -300);
+}
+function setArrow(x, y, ox, oy) {
+  const t = document.querySelector('#targetpoint');
+  const a = document.querySelector('#arrowpath');
+  const omag = Math.sqrt(ox * ox + oy * oy);
+  let ax = 0;
+  let ay = 0
+  if (omag > 0) {
+    ax = (-ox + oy)/omag * 10;
+    ay = (-oy - ox)/omag * 10;
+  }
+  a.setAttribute('d', `M ${x} ${y} l ${ox} ${oy} m ${ax} ${ay} l ${-ax} ${-ay} l ${ay} ${-ax}`);
+  t.setAttribute('cx', x);
+  t.setAttribute('cy', y);
+}
+function calculate_pull() {
+  // Point at target_x, target_y has been dragged by relative amount offset_x, offset_y.
+  const canvas_scale = canvas.getBoundingClientRect().width / 512;
+  const x = Math.round(state.target_x / canvas_scale);
+  const y = Math.round(state.target_y / canvas_scale);
+  if (x < 0 || x >= 512 || y < 0 || y >= 288) {
+    return;
+  }
+  let ox = state.offset_x / canvas_scale;
+  let oy = state.offset_y / canvas_scale;
+  const omag = Math.sqrt(ox * ox + oy * oy);
+  if (omag == 0.0) {
+    setArrow(x, y, 0, 0);
+    for (let f = 1; f < 16; f++) {
+      state.phase_x[f] = 0;
+      state.phase_y[f] = 0;
+      state.position_x[f] = 0;
+      state.position_y[f] = 0;
+      state.velocity_x[f] = 0;
+      state.velocity_y[f] = 0;
+    }
+    return;
+  }
+  // Unit vector
+  ox = ox / omag;
+  oy = oy / omag;
+  // sqrt to give a feeling of elastic resistance.
+  const force = pull_scale_posonly * Math.sqrt(omag);
+
+  // Get flow coefficients at the target pixel:
+  const offset = 16 * (x + y * 512); // 64 bytes per pixel
+  let move_x = 0;
+  let move_y = 0;
+
+  for (let f = 1; f < 16; f++) {
+    const i = data.flow[offset + f];
+    const s = state.scales[f];
+    const xr = ((i & 0xff) / 128 - 1) * s;
+    const yr = -(((i >> 8) & 0xff) / 128 - 1) * s;
+    const xi = (((i >> 16) & 0xff) / 128 - 1) * s;
+    const yi = -(((i >> 24) & 0xff) / 128 - 1) * s;
+
+    state.phase_x[f] = 0;
+    state.phase_y[f] = 0;
+
+    // X and Y independent. Pick phase explicity to maximise offset,
+    // because we're not going to use the imaginary part anyway in the ModalNerf
+    // approach.
+    // Dot product with offset vector.
+    const dot_r = ox * xr + oy * yr;
+    const dot_i = ox * xi + oy * yi;
+    // Magnitude of dot product shows how far we can pull in
+    // the given direction.
+    const mag = Math.sqrt(dot_r * dot_r + dot_i * dot_i);
+    const force_x = Math.abs(ox * mag * force);
+    const force_y = Math.abs(oy * mag * force);
+    // Set phase independently so each begins with max position,
+    // depending on sign of ox/oy..
+    state.phase_x[f] = Math.atan2(ox * xi, ox * xr);
+    state.phase_y[f] = Math.atan2(oy * yi, oy * yr);
+    state.position_x[f] = force_x / state.omega[f];
+    state.position_y[f] = -force_y / state.omega[f];
+    state.velocity_x[f] = 0;
+    state.velocity_y[f] = 0;
+
+    move_x += force_x * Math.sign(ox) * Math.sqrt(xr*xr + xi*xi);
+    move_y += force_y * Math.sign(oy) * Math.sqrt(yr*yr + yi*yi);
+  }
+  setArrow(x + move_x, y + move_y, ox*omag - move_x, oy*omag - move_y);
+}
+
+// Drag to animate.
+
+function addHandlers() {
+  // An empty image
+  const img = document.createElement("img");   
+  img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+  const canvas = document.getElementById("canvas");
+  canvas.addEventListener("pointerdown", (event) => {
+    state.held = true;
+    state.target_x = event.offsetX;
+    state.target_y = event.offsetY;
+    state.client_x = event.clientX;
+    state.client_y = event.clientY;
+    state.offset_x = 0;
+    state.offset_y = 0;
+    calculate_pull();
+    canvas.setPointerCapture(event.pointerId);
+  });
+  canvas.addEventListener("pointermove", (event) => {
+    if (state.held) {
+      state.offset_x = event.clientX - state.client_x;
+      state.offset_y = event.clientY - state.client_y;
+      calculate_pull();
+    }
+  });
+  canvas.addEventListener("pointerup", (event) => {
+    state.held = false;
+    hideArrow();
+  });
+  canvas.addEventListener("pointercancel", (event) => {
+    state.held = false;
+    hideArrow();
+  });
+  document.querySelector('.load').addEventListener('click', (event) => {
+    if (event.target.dataset && event.target.dataset.folder) {
+      load(event.target.dataset.folder);
+    }
+  });
+}
+
+addHandlers();
+load('rose');
+tick();
+
+</script>
+
+<!-- End demo --!>
+
+
+
+
 
 <div id="wrapper" style="text-align:center;"> 
     <video autoplay muted loop playsinline id="result_video_side" height="640px" width="auto" > 
@@ -475,7 +1084,7 @@
      -->
     <!--/ Paper video. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths"><br><br>
         <h3 class="title is-3">Acknowledgements</h3>
         <div class="content has-text-justified">
           <p>
