@@ -15,7 +15,7 @@ $(document).ready(function() {
 			loop: true,
 			infinite: true,
 			pagination: false,
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 3000,
     }
 
