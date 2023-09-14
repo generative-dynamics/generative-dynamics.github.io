@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -454,7 +455,7 @@
 Click and drag a point on the image blow, release to see how the scene moves!
 </div>
 
-<!-- Begin demo --!>
+<!-- Begin demo -->
 <center>
 <div id="interactive" class="hero">
 <canvas id="canvas" width="512" height="288"></canvas>
@@ -465,7 +466,7 @@ Click and drag a point on the image blow, release to see how the scene moves!
 <br> 
 Try a different image by clicking on the icons below:
 <div class="load">
- <img src="static/images/rose/image.png" data-folder="rose"><img src="static/images/flower/image.png" data-folder="flower">
+ <img src="static/images/rose/image.png" data-folder="rose"><img src="static/images/flower/image.png" data-folder="flower"><img src="static/images/tree2/image.png" data-folder="tree2">
 </div>
 </center>
 
@@ -766,11 +767,23 @@ const all_scales = {
       39.01246448, 56.93307181, 49.79553268, 29.98144,
       18.90769313, 40.17826362, 48.75677635, 38.4140233,
       68.85882055, 55.3376773, 35.49130819, 16.33732716
-  ]
+  ],
+  tree2: [
+    240.20390244, 133.89857246, 96.93403143, 66.91954941, 67.28519664,
+    63.38977511, 62.59354017, 111.60296899, 212.98846689, 268.27156353,
+   397.19904949, 168.01954149, 65.93469411, 50.95328619, 52.01964568,
+    47.4997937
+  ],
 }
 const all_omega_scales = {
   rose: 2.0,
-  flower: 3.0
+  flower: 3.0,
+  tree2: 2.5
+}
+const all_force_scales = {
+  rose: [1,1],
+  flower: [1,1],
+  tree2: [.5,.5],
 }
 
 function draw(data, state) {
@@ -907,6 +920,8 @@ async function load(folder) {
     state.phase_y[f] = 0;
   }
   calculate_omega(all_omega_scales[folder]);
+  state.force_scale_x = all_force_scales[folder][0];
+  state.force_scale_y = all_force_scales[folder][1];
   remaining_to_load--;
 }
 
@@ -988,8 +1003,8 @@ function calculate_pull() {
     // Magnitude of dot product shows how far we can pull in
     // the given direction.
     const mag = Math.sqrt(dot_r * dot_r + dot_i * dot_i);
-    const force_x = Math.abs(ox * mag * force);
-    const force_y = Math.abs(oy * mag * force);
+    const force_x = Math.abs(ox * mag * force) * state.force_scale_x;
+    const force_y = Math.abs(oy * mag * force) * state.force_scale_y;
     // Set phase independently so each begins with max position,
     // depending on sign of ox/oy..
     state.phase_x[f] = Math.atan2(ox * xi, ox * xr);
@@ -1059,7 +1074,7 @@ tick();
 
 </script>
 
-<!-- End demo --!>
+<!-- End demo -->
 
 
 
