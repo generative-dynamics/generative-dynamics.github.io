@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     var options = {
 			slidesToScroll: 1,
-			slidesToShow: 4,
+			slidesToShow: 3,
 			loop: true,
 			infinite: true,
 			pagination: false,
