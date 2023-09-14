@@ -6,7 +6,7 @@
         content="GID">
   <meta name="keywords" content="GID">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Generative Image Dynamics</title>
+  <title>GID</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -27,7 +27,6 @@
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -36,7 +35,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 <style>
 #interactive {
@@ -446,7 +444,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"/></svg> 
 </div>
 <div class="columns is-centered has-text-centered">
-Click and drag a point on the image below, release to see how the scene moves!
+Click and drag a point on the image blow, release to see how the scene moves!
 </div>
 
 <!-- Begin demo --!>
@@ -454,7 +452,7 @@ Click and drag a point on the image below, release to see how the scene moves!
 <div id="interactive" class="hero">
 <canvas id="canvas" width="512" height="288"></canvas>
 <div id=glfailed><br><br>[Demo requires browser with WebGL2 support.]</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288" fill="none"><path id="arrowpath" stroke="white" stroke-width="3" d="M 393.9105549880691 113.23578423775986 l 23.49309084526422 22.441299095573477 m -0.32373748119006535 -14.138429688026626 l 0.32373748119006535 14.138429688026626 l -14.138429688026626 0.32373748119006535"></path><circle id="targetpoint" cx="393.9105549880691" cy="113.23578423775986" r="5" fill="#08f" stroke="white" stroke-width="2"></circle></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288" fill="none"><path id="arrowpath" stroke="white" stroke-width="3" fill="none" d=""></path><circle id="targetpoint" cx="-300" cy="0" r="5" fill="#08f" stroke="white" stroke-width="2"></circle></svg>
 </div>
 
 <br> 
