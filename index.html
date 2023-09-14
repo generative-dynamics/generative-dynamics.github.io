@@ -42,17 +42,24 @@
 #interactive {
   position: relative;
   display: inline-block;
-  height: 432px;
   width: 768px;
+  aspect-ratio: 16/9;
+  max-width: 100%;
 }
-#interactive canvas, #interactive svg {
+#interactive canvas, #interactive svg, #interactive #glfailed {
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
+  touch-action: none;
 }
 #interactive svg {
   pointer-events: none;
+}
+#interactive #glfailed {
+  color: #f88;
+  background: black;
+  display: none;
 }
 .load img {
   width: 128px;
@@ -446,6 +453,7 @@ Click and drag a point on the image blow, release to see how the scene moves!
 <center>
 <div id="interactive" class="hero">
 <canvas id="canvas" width="512" height="288"></canvas>
+<div id=glfailed><br><br>[Demo requires browser with WebGL2 support.]</div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 288" fill="none"><path id="arrowpath" stroke="white" stroke-width="3" d="M 393.9105549880691 113.23578423775986 l 23.49309084526422 22.441299095573477 m -0.32373748119006535 -14.138429688026626 l 0.32373748119006535 14.138429688026626 l -14.138429688026626 0.32373748119006535"></path><circle id="targetpoint" cx="393.9105549880691" cy="113.23578423775986" r="5" fill="#08f" stroke="white" stroke-width="2"></circle></svg>
 </div>
 
@@ -602,6 +610,10 @@ function initPrograms(vertexShaders, fragmentShaders, programs) {
     programs[i].uniform = uniform;
   }
   console.log('Programs inited.');
+}
+
+function glFailed() {
+  document.getElementById('glfailed').style.display = "block";
 }
 
 function init() {
@@ -1018,6 +1030,14 @@ function addHandlers() {
     hideArrow();
   });
   canvas.addEventListener("pointercancel", (event) => {
+    state.held = false;
+    hideArrow();
+  });
+  canvas.addEventListener("pointerout", (event) => {
+    state.held = false;
+    hideArrow();
+  });
+  canvas.addEventListener("pointerleave", (event) => {
     state.held = false;
     hideArrow();
   });
