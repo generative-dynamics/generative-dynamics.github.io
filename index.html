@@ -391,10 +391,6 @@
           </video>
         </div> -->
 
- 
-
-
-
 
 
       </div>
@@ -417,7 +413,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-We present an approach to modeling an image-space prior on scene dynamics. Our prior is learned from a collection of motion trajectories extracted from real video sequences containing natural, oscillating motion such as trees, flowers, candles, and clothes blowing in the wind. Given a single image, our trained model uses a frequency-coordinated diffusion sampling process to predict a per-pixel long-term motion representation in the Fourier domain, which we call a neural stochastic motion texture. This representation can be converted into dense motion trajectories that span an entire video. Along with an image-based rendering module, these trajectories can be used for a number of downstream applications, such as turning still images into seamlessly looping dynamic videos, or allowing users to realistically interact with objects in real pictures. 
+            We present an approach to modeling an image-space prior on scene motion. Our prior is learned from a collection of motion trajectories extracted from real video sequences depicting natural, oscillatory dynamics such as trees, flowers, candles, and clothes swaying in the wind. We model this dense, long-term motion prior in the Fourier domain:given a single image, our trained model uses a frequency-coordinated diffusion sampling process to predict a spectral volume, which can be converted into a motion texture that spans an entire video. Along with an image-based rendering module, these trajectories can be used for a number of downstream applications, such as turning still images into seamlessly looping videos, or allowing users to realistically interact with objects in real pictures by interpreting the spectral volumes as image-space modal bases, which approximate object dynamics.
           </p>
         </div>
       </div>
@@ -442,9 +438,8 @@ We present an approach to modeling an image-space prior on scene dynamics. Our p
     <div class="clear"></div>
     We can simulate the response of object dynamics to an interactive user excitation using 
     <br>
-    the technique proposed
-    by <a href="http://www.interactivedynamicvideo.com/">Davis et
-    al.</a> over the generated motion representation. 
+    modal analsysis by <a href="http://www.interactivedynamicvideo.com/ISMB_Davis_2015.pdf"> Davis et
+    al. </a>, interpreting generated spectrum volume as image-space modal basis. 
 </div>
 <br>
 <br>
@@ -1136,9 +1131,9 @@ tick();
         Manipulation of Objects in Video</a> (Davis, Chen, and Durand)</li>
         <li><a href="https://dspace.mit.edu/handle/1721.1/107330"
         target="_blank">Visual Vibration Analysis</a> (Abe Davis)</li>
-        <li><a href="https://openaccess.thecvf.com/content_cvpr_2015/html/Davis_Visual_Vibrometry_Estimating_2015_CVPR_paper.html"
-        target="_blank">Visual vibrometry: Estimating Material
-        Properties from Small Motion in Video</a> (Abe Davis, et al.)</li>
+        <!-- <li><a href="https://openaccess.thecvf.com/content_cvpr_2015/html/Davis_Visual_Vibrometry_Estimating_2015_CVPR_paper.html" -->
+        <!-- target="_blank">Visual vibrometry: Estimating Material -->
+        <!-- Properties from Small Motion in Video</a> (Abe Davis, et al.)</li> -->
         </li>
       </ul>
     </div>
@@ -1157,28 +1152,15 @@ tick();
       </div>
     </div> -->
 
+  <!-- </div> -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths"><br><br>
+      <h2 class="title is-3">Acknowledgements</h3>
+      <div class="content has-text-justified">
+          Thanks to Abe Davis, Rick Szeliski, Andrew Liu, Qianqian Wang, Boyang Deng, Xuan Luo, and Lucy Chai for helpful proofreading, comments and discussions.
+      </div>
+    </div>
   </div>
-    <!-- Paper video. -->
-<!--     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <a id="overview_video"></a>
-          <iframe src="https://www.youtube.com/embed/prrhosyJzIA" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-     -->
-    <!--/ Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths"><br><br>
-        <h3 class="title is-3">Acknowledgements</h3>
-        <div class="content has-text-justified">
-          <p>
-            Thanks to Rick Szeliski, Andrew Liu, Qianqian Wang, Boyang Deng, Xuan Luo, and Lucy Chai for helpful proofreading, comments and discussions.
-        </div>
-      </div>
-    </div>
 
   </div>
 
