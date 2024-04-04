@@ -1,1 +1,1 @@
-# generative-dynamics.github.io
+# generative-dynamics.github.io website
